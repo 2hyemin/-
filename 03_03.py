@@ -30,19 +30,51 @@
 
 
 # for, range
-add = 0
-for i in range(1, 11):
-    add = add + i
-    print(add)
+# add = 0
+# for i in range(1, 11):
+#     add = add + i
+#     print(add)
 
 
-marks = [90, 25, 67, 45, 80]
-for number in range(len(marks)):
-    if marks[number] <60:continue
-    print("%d학생 축" % (number+1))
+# marks = [90, 25, 67, 45, 80]
+# for number in range(len(marks)):
+#     if marks[number] <60:continue
+#     print("%d학생 축" % (number+1))
 
 # for문과 range 함수를 사용해 1부터 100까지 더해보자.
-add = 0
-for i in range(1,101):
-    add = add + i
-    print(add)
+# add = 0
+# for i in range(1,101):
+#     add = add + i
+#     print(add)
+
+# 99단
+# for i in range(1,10):
+#     for j in range(1,10):
+#         print(i*j, end = " ")
+#     print(' ')
+
+# 리스트 내포(List comprehension) 사용하기
+a = [1,2,3,4]
+result = []
+for num in a :
+    result.append(num*3)
+print(result)
+
+# 위 와 같음
+a = [1,2,3,4]
+result = [num * 3 for num in a]
+print(result)
+
+# a 값 중 짝수만 3을 곱하고 싶다.
+# [표현식 for 항목 in 반복 가능 객체 if 조건]
+a = [1,2,3,4]
+result = [num * 3 for num in a if num % 2 == 0]
+print(result)
+
+#구구단 리스트 내포
+result = [x*y for x in range(1,10)
+    for y in range(1,10)]
+print(result)
+
+
+
