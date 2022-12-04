@@ -93,65 +93,78 @@
 # 생성자
 # 객체에 초깃값을 설정하지 않을때 사용
 
-class FourCal :
-    def __init__(self,first,second):
-        self.first = first
-        self.second = second
+# class FourCal :
+#     def __init__(self,first,second):
+#         self.first = first
+#         self.second = second
 
-    def setdata(self,first,second):
-        self.first = first
-        self.second = second
+#     def setdata(self,first,second):
+#         self.first = first
+#         self.second = second
 
-    def add(self):
-        result = self.first + self.second
-        return result
+#     def add(self):
+#         result = self.first + self.second
+#         return result
 
-    def mul(self):
-        result = self.first * self.second
-        return result
+#     def mul(self):
+#         result = self.first * self.second
+#         return result
 
-    def sub(self):
-        result = self.first - self.second
-        return result
+#     def sub(self):
+#         result = self.first - self.second
+#         return result
 
-    def div(self):
-        result = self.first / self.second
-        return result
+#     def div(self):
+#         result = self.first / self.second
+#         return result
 
-a = FourCal(4,2) 
-print(a.first)
-print(a.second)
+# a = FourCal(4,2) 
+# print(a.first)
+# print(a.second)
 
-print(a.add())
-print(a.mul())
-
-
-# 클래스의 상속
-# class 클래스 이름(상속할 클래스 이름)
-class MoreFourCal(FourCal):
-    pass
-
-a = MoreFourCal(4,2)
-print(a.add())
-
-class MoreFourCal(FourCal):
-    def pow(self):
-        result = self.first ** self.second
-        return result
-
-a = MoreFourCal(4,2)
-print(a.pow())
+# print(a.add())
+# print(a.mul())
 
 
+# # 클래스의 상속
+# # class 클래스 이름(상속할 클래스 이름)
+# class MoreFourCal(FourCal):
+#     pass
 
-# 곱하는 값이 0일 경우 'Fail' 문자열을 출력하는 클래스 FailFourCal을 위에서 만든 FourCal 클래스를 상속하여 만드시오.
+# a = MoreFourCal(4,2)
+# print(a.add())
 
-class FailFourCal(FourCal):
-    def mul(self):
-        if self.first * self.second == 0:
-            print('Fail')
-        else:
-            pass
+# class MoreFourCal(FourCal):
+#     def pow(self):
+#         result = self.first ** self.second
+#         return result
+
+# a = MoreFourCal(4,2)
+# print(a.pow())
+
+
+
+# # 곱하는 값이 0일 경우 'Fail' 문자열을 출력하는 클래스 FailFourCal을 위에서 만든 FourCal 클래스를 상속하여 만드시오.
+
+# class FailFourCal(FourCal):
+#     def mul(self):
+#         if self.second == 0:
+#             return 0
+#         else:
+#             return self.first * self.second
+# a = MoreFourCal(4,0)
+# print(a.mul())
+
+
+
+# 클래스 변수
+class Family :
+    lastname = "Big"
     
-a = FailFourCal(2,0)
-print(a.mul())
+print(Family.lastname)
+
+a = Family()
+b = Family()
+
+print(a.lastname)
+print(b.lastname)
